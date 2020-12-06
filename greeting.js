@@ -9,7 +9,7 @@ function saveName(text){
     localStorage.setItem(USER_LS, text);
 }
 
-function handleSubmit(event){
+function setName(event){
     event.preventDefault();
     const currentValue = input.value;
     showGreeting(currentValue);
@@ -18,13 +18,24 @@ function handleSubmit(event){
 
 function askForName(){
     form.classList.add(SHOWING_CN);
-    form.addEventListener("submit", handleSubmit);
+    form.addEventListener("submit", setName);
 }
 
 function showGreeting(text){
     form.classList.remove(SHOWING_CN);
     greeting.classList.add(SHOWING_CN);
-    greeting.innerText = `Hello ${text}`;
+
+    const editBtn = document.createElement("button");
+    editBtn.innerHTML = "✐";
+    editBtn.addEventListener("click", editUser);
+    greeting.innerHTML = `Hello ${text}     `;
+    greeting.appendChild(editBtn);
+}
+
+function editUser(event) {
+    localStorage.removeItem(USER_LS);
+    greeting.classList.remove(SHOWING_CN);
+    askForName();
 }
 
 function loadName(){
