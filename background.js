@@ -2,7 +2,6 @@ const body = document.querySelector("body");
 
 const IMAGE_SRC = ['https://cdn.pixabay.com/photo/2015/10/12/14/59/milky-way-984050_1280.jpg',
 'https://cdn.pixabay.com/photo/2016/02/13/12/26/aurora-1197753_1280.jpg',
-'https://cdn.pixabay.com/photo/2013/06/12/22/20/zion-park-139012_1280.jpg',
 'https://cdn.pixabay.com/photo/2017/12/15/13/51/polynesia-3021072_1280.jpg',
 'https://cdn.pixabay.com/photo/2020/10/11/11/07/castle-5645512_1280.jpg',
 'https://cdn.pixabay.com/photo/2020/10/11/17/27/mountain-5646490_1280.jpg',
