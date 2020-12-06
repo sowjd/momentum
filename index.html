@@ -1,28 +1,35 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8"/>
-    <title>Test JS</title>
-    <link href="index.css" rel="stylesheet" type="text/css" />
-  </head>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Test JS</title>
+        <link href="styles.css" rel="stylesheet" type="text/css"/>
+    </head>
 
-  <body>
+    <body>
+    <div><p class="js-weather weather"></p></div>
     <div class="js-clock">
-        <h1>00:00</h1>
+        <h1 class="time">00:00</h1>
     </div>
     <form class="js-form form">
-      <input type="text" placeholder="What is your name?" />
+        <input type="text" class="input-field name" placeholder="What is your name?"/>
     </form>
-    <h4 class="js-greeting greeting"></h4>
-    <form class="js-todo">
-      <input type="text" placeholder="Write a to do" />
-    </form>
-    <ul class="js-todoList"></ul>
-    <span class="js-weather"></span>
+    <div><span class="js-greeting greeting"></span></div>
+    <div class="left">
+        <p class="title">📋 TODO 📋</p>
+        <form class="js-todo">
+            <input type="text" class="input-field task" placeholder="Write your task"/>
+        </form>
+        <ul class="js-todoList"></ul>
+    </div>
+    <div class="right">
+        <p class="title">✅ DONE ✅</p>
+        <ul class="js-doneList"></ul>
+    </div>
     <script src="clock.js"></script>
     <script src="greeting.js"></script>
     <script src="todo.js"></script>
     <script src="background.js"></script>
     <script src="weather.js"></script>
-  </body>
+    </body>
 </html>
